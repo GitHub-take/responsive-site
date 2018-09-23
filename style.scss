@@ -75,7 +75,7 @@ section {
   background-image: url("./image/image_top.jpg");
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 250px;
 }
 //middleSection
 #middleSection {
@@ -118,6 +118,9 @@ section {
 }
 // desktop
 @media (min-width: 769px) {
+  #topSection {
+    height: 500px;
+  }
   #middleSection {
     .container {
       @include flex-direction(row);

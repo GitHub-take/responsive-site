@@ -57,7 +57,7 @@ section h3 {
   background-image: url("./image/image_top.jpg");
   background-size: cover;
   background-position: center;
-  height: 500px; }
+  height: 250px; }
 
 #middleSection {
   padding: 3rem 0 1rem 0;
@@ -99,6 +99,9 @@ section h3 {
     border-radius: 4px; }
 
 @media (min-width: 769px) {
+  #topSection {
+    height: 500px; }
+
   #middleSection .container {
     -webkit-flex-direction: row;
     flex-direction: row; }
