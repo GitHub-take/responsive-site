@@ -72,11 +72,10 @@ section {
 }
 //topSection
 #topSection {
-  img {
-    @extend .block-center;
-    height: 500px;
-    width: 100%;
-  }
+  background-image: url("./image/image_top.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
 }
 //middleSection
 #middleSection {

@@ -38,7 +38,7 @@ a {
 
 /* Layout
 ------------------------------------------------------------*/
-.block-center, #topSection img {
+.block-center {
   display: block;
   margin: 0 auto; }
 
@@ -53,9 +53,11 @@ section h2 {
 section h3 {
   font-size: 2.4rem; }
 
-#topSection img {
-  height: 500px;
-  width: 100%; }
+#topSection {
+  background-image: url("./image/image_top.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px; }
 
 #middleSection {
   padding: 3rem 0 1rem 0;
