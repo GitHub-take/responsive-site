@@ -1,0 +1,131 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #f9c4aa;
+$subColor: #eae7e7;
+$keyColor: #ae4552;
+$fontColor: #281f1c;
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($fontColor, darken($fontColor, 10%), lighten($fontColor, 5%), darken($fontColor, 10%));
+  text-decoration: none;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Contents
+------------------------------------------------------------*/
+//common
+section {
+  h1, h2, h3 {
+    @extend .text-center;
+    @extend .abel;
+    @extend .uppercase;
+  }
+  h1 {
+    font-size: 4.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+//topSection
+#topSection {
+  img {
+    @extend .block-center;
+    height: 500px;
+    width: 100%;
+  }
+}
+//middleSection
+#middleSection {
+  padding: 3rem 0 1rem 0;
+  background-color: $baseColor;
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+  }
+  .content {
+    @include flex(1);
+    background-color: $subColor;
+    margin: 10px 10px; 
+    @include box-sizing(border-box);
+  }
+  h2 {
+    background-color: $keyColor;
+  }
+  p {
+    padding: 1rem;
+  }
+}
+//underSection
+#underSection {
+  padding: 3rem 0 5rem 0;
+  background-color: $subColor;
+  .button-contact {
+    height: 24px;
+    width: 200px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.6rem;
+    border: 2px solid $fontColor;
+    background-color: $keyColor;
+    @include border-radius(4px);
+  }
+}
+// desktop
+@media (min-width: 769px) {
+  #middleSection {
+    .container {
+      @include flex-direction(row);
+    }
+    .content {
+      @include box-sizing(border-box);
+      width: (100% / 3);
+    }
+  }
+}
